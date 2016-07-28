@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0764)https://ad.atdmt.com/as/direct;p=11237202246191;as=11237202249816;a=11237202249805;crs=11237202246450;cr=11237202259263;i.ts=1466464079/lazer_300x600.html?click=https://www.googleadservices.com/pagead/aclk%3Fsa%3DL%26ai%3DCEYXZTndoV5X8F86gpgP8rJ74AvHKiPpE8PDZ57MCsLzn5ZwEEAEg3LmABGDJ3sKJkKToD6AB0vjL4gPIAQmoAwGqBNIBT9CNpfXtpquLb35S3FGNtVdNz0ijj3s32VOG8tT8r7FMAXE8dPa1zThCBXb74by7uXSTLlHj_ztudqHlLYV88NyVBaUFmDy8ipAgb9w5bBEm_DMi-jQEAvBkYCE4WD0Mx2V3VXS_GaPVFQkQNZnTs2QjAmJCQ7MTLzfVSSHonuFeR41H7sD96SsD9aZQc4HzFYMt6AlHMli9GjiC4ZKiE_yWSsgFBTrp2Eboh7jspIUCNUFetSv9WXTeKpIgJ4jTrxNLo-Q1u3NuZ7hP9vhXGYU4iAYBoAYRgAfAzsoiqAemvhvYBwDYEwM%26num%3D1%26cid%3DCAASEuRoSwqWmzBOon4XSqGyTMKl9w%26sig%3DAOD64_01tQfCdGTpQFC9327jWKFC-zBnYw%26client%3Dca-pub-5764774302689399%26adurl%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>lazer_300x600</title>
+
+<script src="./easeljs-0.8.1.min.js"></script>
+<script src="./tweenjs-0.6.1.min.js"></script>
+<script src="./movieclip-0.8.1.min.js"></script>
+<script src="./preloadjs-0.6.1.min.js"></script>
+<script src="./lazer_300x600.js"></script>
+<style>
+	canvas{
+		border:1px solid #646464;
+		height: 598px;
+		width: 298px;
+		top:0px;
+		left:0px;
+		position:fixed;
+		overflow:hidden;
+	}
+</style>
+
+<script>
+var canvas, stage, exportRoot; 
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib.lazer_300x600();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+	stage.enableMouseOver();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#FFFFFF" marginwidth="0" marginheight="0">
+	<a href="https://www.googleadservices.com/pagead/aclk?sa=L&amp;ai=CEYXZTndoV5X8F86gpgP8rJ74AvHKiPpE8PDZ57MCsLzn5ZwEEAEg3LmABGDJ3sKJkKToD6AB0vjL4gPIAQmoAwGqBNIBT9CNpfXtpquLb35S3FGNtVdNz0ijj3s32VOG8tT8r7FMAXE8dPa1zThCBXb74by7uXSTLlHj_ztudqHlLYV88NyVBaUFmDy8ipAgb9w5bBEm_DMi-jQEAvBkYCE4WD0Mx2V3VXS_GaPVFQkQNZnTs2QjAmJCQ7MTLzfVSSHonuFeR41H7sD96SsD9aZQc4HzFYMt6AlHMli9GjiC4ZKiE_yWSsgFBTrp2Eboh7jspIUCNUFetSv9WXTeKpIgJ4jTrxNLo-Q1u3NuZ7hP9vhXGYU4iAYBoAYRgAfAzsoiqAemvhvYBwDYEwM&amp;num=1&amp;cid=CAASEuRoSwqWmzBOon4XSqGyTMKl9w&amp;sig=AOD64_01tQfCdGTpQFC9327jWKFC-zBnYw&amp;client=ca-pub-5764774302689399&amp;adurl=https://ad.atdmt.com/c/go;p=11237202246191;as=11237202249816;a=11237202249805;crs=11237202246450;cr=11237202259263;i.ts=1466464079" target="_blank">
+		<canvas id="canvas" width="300" height="600" style="background-color:#FFFFFF"></canvas>
+	</a>
+
+</body></html>

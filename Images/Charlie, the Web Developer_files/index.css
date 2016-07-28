@@ -1,0 +1,81 @@
+
+html, body {
+	width: 100%;
+}
+
+.header {
+	background-color: black;
+	width: 100;
+}
+
+.main {
+	background-color: black;
+	width: 100;
+	padding-bottom: 25px;
+}
+
+.main h1 {
+	color: white;
+	width: 100%;
+	font-size: 14px;
+	font-family: Helvetica, sans-serif;
+	font-weight: -50px;
+	text-align: center;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	padding-right: 15px;
+	padding-top: 15px;
+	margin-top: -18px;
+	margin-left: -10px;
+	text-align: center;
+}
+
+ul li {
+	display: inline-block;
+	text-decoration: none;
+	float: right;
+	font-size: 14px;
+	font-family: Tahoma;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
+
+.main p {
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 70px;
+	text-align: justify;
+	background-color: white;
+	color: black;
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
+a:hover {
+color: pink;
+}
+
+.footer {
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
