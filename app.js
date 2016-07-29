@@ -1,4 +1,4 @@
 var app = angular.module("portfolioApp", ["ngRoute"]);
-app.controller("project", function($scope){
+app.controller("projectController", function($scope){
 
 });

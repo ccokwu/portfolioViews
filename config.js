@@ -2,14 +2,14 @@ var app = angular.module("portfolioApp");
 app.config(function($routeProvider){
   $routeProvider.when("/", {
     templateUrl: "partials/#/",
-    controller: "project"
+    controller: "projectController"
   });
   $routeProvider.when("/about", {
     templateUrl: "partials/about.html",
-    controller: "project"
+    controller: "projectController"
   });
   $routeProvider.when("/contact", {
     templateUrl: "partials/contact.html",
-    controller: "project"
+    controller: "projectController"
   });
 });
